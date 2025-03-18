@@ -40,6 +40,7 @@ rotateSprite(): Adjusts Sprite2D rotation to match the direction of Line2D point
 Notes
 This plugin was developed within a short time frame and may contain bugs.
 width_curve is added automatically when the node initializes,Please adjust as needed.
+When dragging other points, the first point is fixed
 It is released under the MIT License, and contributions or improvements are welcome. Feel free to modify and share it as needed.
 
 zh
@@ -84,4 +85,7 @@ removeSprite()：移除多余的 Sprite2D。
 rotateSprite()：根据 Line2D 点的方向调整 Sprite2D 旋转。
 
 注意事项:
-该插件开发时间较短，可能会有一些bug，节点初始化会自动添加width_curve，请根据需要自行调整，遵循MIT协议，欢迎大家补充修改完善以及分享。
+该插件开发时间较短，可能会有一些bug
+节点初始化会自动添加width_curve，请根据需要自行调整
+在拖动其他点时，第一个点是固定的
+遵循MIT协议，欢迎大家补充修改完善以及分享。
