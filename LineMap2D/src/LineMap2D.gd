@@ -49,7 +49,7 @@ extends Line2D
 	set = updateMaterial
 
 var NextPointCount : int = 0
-var Sprites : Array = []
+@export var Sprites : Array = []
 var lastHash = null
 
 func _ready():
@@ -126,8 +126,9 @@ func updateSprite():
 
 ##en:Texture creation
 ##zh:纹理创建
-
 func createSprite():
+	if Sprites.size() > get_point_count():
+		removeSprite()
 	for i in range(get_point_count()-Sprites.size() - 1):
 		var position = get_point_position(i)
 		var sprite = Sprite2D.new()
@@ -143,10 +144,8 @@ func createSprite():
 ##zh:纹理移除
 func removeSprite():
 	var sprite = Sprites.pop_back()
-	if sprite and sprite.is_inside_tree():
-		remove_child(sprite)
-		sprite.queue_free()
-		Sprites.remove_at(Sprites.size()-1)
+	remove_child(sprite)
+	sprite.queue_free()
 
 ##en:Texture rotation
 ##zh:纹理旋转
