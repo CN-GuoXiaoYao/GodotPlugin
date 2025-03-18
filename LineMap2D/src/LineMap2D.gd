@@ -11,7 +11,10 @@ extends Line2D
 		update()
 ##en:Distance between points in Line2D, this property will not be used when PositionLock is false
 ##zh:Line2D中点与点之间的距离，当PositionLock为false时，该属性不会使用
-@export var PointDistance : float = 50
+@export var PointDistance : float = 50:
+	set(value):
+		PointDistance = value
+		updateDistance()
 ##en:The distance between points is automatically adjusted according to PointDistance when this property is true, and the position of the Line2D points (not child nodes) can be freely modified when this property is false
 ##zh:该属性为true时，点与点之间的距离按照PointDistance自动修改，该属性为false时，可以随意修改Line2D点的位置(不是子节点)
 @export var PositionLock : bool = true
@@ -64,7 +67,7 @@ func _process(delta: float):
 	var pointHash = hash(points)
 	if lastHash != pointHash:
 		lastHash = pointHash
-		update()
+		call_deferred("update")
 		
 func update():
 	updateUI()
