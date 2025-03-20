@@ -4,9 +4,9 @@
 **2DLineMap** is a **Godot 4 plugin** based on **Line2D** that allows developers to create **textured 2D lines** with dynamic control over **point positions, rotation, scaling,** and other properties. This plugin runs in **@tool mode**, enabling **real-time visualization and editing** within the **Godot editor**.  
 
 ## **Install** ✈️  
-Place the **plugin folder** into `res://addons/`.  
-In the **Godot editor**, go to **Project Settings -> Plugins** and enable **2DLineMap**.  
-Add a **LineMap2D node** to your scene to start using the plugin.  
+- Place the **plugin folder** into `res://addons/`。  
+- In the **Godot editor**, go to **Project Settings -> Plugins** and enable **2DLineMap**。  
+- Add a **LineMap2D node** to your scene to start using the plugin.  
 
 ## **Usage** 📝  
 - In the **Point** category of the **LineMap2D** node, adjust **PointCount** to dynamically add or remove points.  
