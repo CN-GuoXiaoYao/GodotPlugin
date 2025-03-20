@@ -10,4 +10,4 @@ zh
 
 Owned:
 
--LineMap2D
+-LineMap2D Download:https://raw.githubusercontent.com/CN-GuoXiaoYao/GodotPlugin/9fc2285ea9e4ff9c10e21c0e5dae78fcdf6099fb/LineMap2D/Download/LineMap2D.zip
